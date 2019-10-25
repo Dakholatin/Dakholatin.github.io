@@ -1,0 +1,81 @@
+body{
+  background: url("HomeNew.png");
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+.gambar{
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+.logo{
+  float: right;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+.menu{
+  border: 1px ;
+  border-color: #000080;
+  background-color:#20B2AA;
+  margin-top: 50px;
+  padding: 15px;
+  font-size: 30px;
+}
+
+p{
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+h1{
+    font-family: Berlin Sans FB Demi;
+    font-size: 50px;
+    margin-top: 0px;
+    color: #000080;
+}
+
+h2{
+    font-family: Berlin Sans FB Demi;
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    color: #000080;
+}
+
+.pilihan{
+  width: 500px;
+  margin-left:100px;
+}
+
+.ikon{
+  width: 150px;
+  height: 150px;
+  padding: 30px;
+}
+
+.pilihan .ikon{
+  width: 170px;
+  margin: 5px;
+  float: left;
+
+}
+.pilihan .ikon img{
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+
+.pilihan .ikon img:hover{
+  cursor: pointer;
+  transition: 1s;
+  transform: scale(1.3);
+}
