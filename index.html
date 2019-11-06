@@ -11,24 +11,39 @@
     <FORM class="form-isi" action="GO-HEALTH 1/Home.html">
       <P>
         Username
-        <input class="text" type="text"/>
+        <input class="text" type="text" required />
         <br>
 
         Password
-        <input class="text" type="Password"/>
+        <input class="text" type="Password" required />
       </P>
       <p>
         <input class="submit" type="submit" name="submit" value="Login" />
-        <!-- <center><p>----------------------- OR ----------------------</p></center> -->
+        
         <center><a href="CreateAccount.html" target="_blank">Create an Account</a></center>
       </p>
         
     </FORM>
     <br>
       <div class="container" style="background-color:#f1f1f1">
-        <button class="cancelbtn" type="button">Cancel</button>
+        <button class="cancelbtn" type="button" onclick="konfirmasi()">Cancel</button>
         <a href="#" class="forgot">Forgot Password?</a>
       </div>
+      
+      <script type="text/javascript">
+        function konfirmasi(){
+          var konfirmasi=confirm('apakah anda yakin?');
+          var text= "";
+
+          if (konfirmasi== true){
+            text="silahkan lanjutkan";
+          }else{
+            text="anda akan tetap di halaman ini";
+          }
+
+          document.getElementByid('hasil').innerHTML()=text;
+        }
+      </script>
 </body>
 
 </html>
