@@ -4,6 +4,7 @@
 <head>
   <title>Create an Account</title>
   <link rel="stylesheet" type="text/css" href="CreateAccount.css">
+
 </head>
 
 <body class="form" >
@@ -11,30 +12,66 @@
     <FORM class="form-isi" action="loginbaru.html">
       <P>
         First Name
-        <input class="text" type="text"/>
+        <input class="text" type="text" required />
         <br>
 
         Last Name
-        <input class="text" type="text"/>
+        <input class="text" type="text" required />
         <br>
 
         E-mail Address
-        <input class="text" type="E-mail"/>
+        <input class="text" type="E-mail" required />
         <br>
 
+        <!-- <div class="Password"> -->
         Password
-        <input class="text" type="Password"/>
+        <input type="Password" id="Password1" onkeyup="validasi()" class="form-control" name="password" required/>
+        <span toggle="#Password1" class="glyphicon glyphicon-eye-open"></span>
+        <!-- </div> -->
         <br>
 
         Confirm your Password
-        <input class="text" type="Password"/>
+        <input type="Password" id="Password2" onkeyup="validasi()" required/>
         <br>
       </P>
-        <input class="submit" type="submit" name="submit" value="Create an Account"/>
+        <input class="submit" type="submit" name="submit" value="Create an Account"  onclick="konfirmasi()" />
+
     </FORM>
       <div class="container" style="background-color:#f1f1f1">
           <button class="cancelbtn" type="button">Cancel</button>
       </div>
+
+<script type="text/javascript">
+  window.onload=function () {
+    document.getElementById("Password1").onchange= konfirmasi;
+    document.getElementById("Password2").onchange=konfirmasi;
+  }
+    function konfirmasi() {
+      var pass2=document.getElementById("Password2").value;
+      var pass1=document.getElementById("Password1").value;
+
+      if (pass1!=pass2)
+        document.getElementById("Password2").setCustomValidity("password tidak sama, coba lagi");
+      else
+        document.getElementById("Password2").setCustomValidity('');
+    }
+
+ $("#Password1").on("keyup",function () {
+   if ($(this).val())
+    $(".glyphicon-eye-open").show();
+  else
+    $(".glyphicon-eye-open").hide();
+ });
+ 
+ $(".glyphicon-eye-open").mousedown(function () {
+   $("#Password1").attr('type','text');
+ }).mouseup(function () {
+   $("#Password1").attr('type','password');
+ }).mouseout(function (){
+    $("#Password1").attr('type','password');
+ });
+  </script>
 </body>
+
 
 </html>
